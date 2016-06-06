@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B137BA841D0577CC00867486 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B137BA831D0577CC00867486 /* AppDelegate.swift */; };
-		B137BA861D0577CC00867486 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B137BA851D0577CC00867486 /* ViewController.swift */; };
+		B137BA861D0577CC00867486 /* FaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B137BA851D0577CC00867486 /* FaceViewController.swift */; };
 		B137BA891D0577CC00867486 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B137BA871D0577CC00867486 /* Main.storyboard */; };
 		B137BA8B1D0577CC00867486 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B137BA8A1D0577CC00867486 /* Assets.xcassets */; };
 		B137BA8E1D0577CC00867486 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B137BA8C1D0577CC00867486 /* LaunchScreen.storyboard */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		B137BA801D0577CC00867486 /* FaceIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B137BA831D0577CC00867486 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B137BA851D0577CC00867486 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B137BA851D0577CC00867486 /* FaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceViewController.swift; sourceTree = "<group>"; };
 		B137BA881D0577CC00867486 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B137BA8A1D0577CC00867486 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B137BA8D1D0577CC00867486 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,14 +54,22 @@
 		B137BA821D0577CC00867486 /* FaceIt */ = {
 			isa = PBXGroup;
 			children = (
-				B137BA831D0577CC00867486 /* AppDelegate.swift */,
-				B137BA851D0577CC00867486 /* ViewController.swift */,
+				B137BA851D0577CC00867486 /* FaceViewController.swift */,
 				B137BA871D0577CC00867486 /* Main.storyboard */,
+				B137BA981D057CBC00867486 /* Supporting Files */,
+			);
+			path = FaceIt;
+			sourceTree = "<group>";
+		};
+		B137BA981D057CBC00867486 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B137BA831D0577CC00867486 /* AppDelegate.swift */,
 				B137BA8A1D0577CC00867486 /* Assets.xcassets */,
 				B137BA8C1D0577CC00867486 /* LaunchScreen.storyboard */,
 				B137BA8F1D0577CC00867486 /* Info.plist */,
 			);
-			path = FaceIt;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B137BA861D0577CC00867486 /* ViewController.swift in Sources */,
+				B137BA861D0577CC00867486 /* FaceViewController.swift in Sources */,
 				B137BA841D0577CC00867486 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +296,7 @@
 				B137BA941D0577CC00867486 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
