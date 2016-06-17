@@ -83,6 +83,7 @@ class FaceViewController: UIViewController
     
     // gesture handler for taps
     //
+    // in Lecture 5
     // toggles the open/closed state of the eyes in the Model
     // and all changes to the Model automatically updateUI()
     // (see the didSet for the Model var expression above)
@@ -103,6 +104,48 @@ class FaceViewController: UIViewController
             case .Squinting: break // we don't know how to toggle "Squinting"
             }
         }
+    }
+    
+    private struct Animation {
+        static let ShakeAngle = CGFloat(M_PI/6)
+        static let ShakeDuration = 0.5
+    }
+    
+    // gesture handler for taps changed in lecture 13
+    // also in the storyboard to shake the head 
+    
+    @IBAction func headShake(sender: UITapGestureRecognizer) {
+        UIView.animateWithDuration(
+            Animation.ShakeDuration,
+            animations: {
+                self.faceView.transform = CGAffineTransformRotate(self.faceView.transform, Animation.ShakeAngle)
+            },
+            completion: { finished in
+                if finished {
+                    UIView.animateWithDuration(
+                        Animation.ShakeDuration,
+                        animations: {
+                            self.faceView.transform = CGAffineTransformRotate(self.faceView.transform, -Animation.ShakeAngle*2)
+                        },
+                        completion: { finished in
+                            if finished {
+                                UIView.animateWithDuration(
+                                    Animation.ShakeDuration,
+                                    animations: {
+                                        self.faceView.transform = CGAffineTransformRotate(self.faceView.transform, Animation.ShakeAngle)
+                                    },
+                                    completion: { finished in
+                                        if finished {
+                                            
+                                        }
+                                    }
+                                )
+                            }
+                        }
+                    )
+                }
+            }
+        )
     }
     
     // ADDED AFTER LECTURE 5
